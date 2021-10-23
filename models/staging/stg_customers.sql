@@ -18,4 +18,4 @@ select
         orders.first_order,
         orders.count
 from customers
-left join orders on customers.id = orders.customer_id
+left join orders on customers.id = orders.customer_id;
