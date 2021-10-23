@@ -3,7 +3,7 @@ with orders as (
                 customer_id,
                 min(created_at) as first_order,
                 count(*) as count
-        from `analytics-engineers-club.coffee_shop.orders
+        from `analytics-engineers-club.coffee_shop.orders`
        group by 1
 ),
 customers as (
@@ -18,4 +18,4 @@ select
         orders.first_order,
         orders.count
 from customers
-left join orders on customers.id = orders.customer_id;
+left join orders on customers.id = orders.customer_id
