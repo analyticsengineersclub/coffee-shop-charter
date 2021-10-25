@@ -7,7 +7,7 @@ with orders as (
 ),
 
     order_items as (
-    select * from {{ref('fct_order_items')}}
+    select * from {{ref('stg_order_items')}}
 ),
 
     product_prices as (
