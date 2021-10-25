@@ -20,7 +20,8 @@ select
     order_items.order_id,
     order_items.product_id,
     products.name as product_name,
-    products.category as product_category
+    products.category as product_category,
+    product_prices.price as price
 from order_items 
 left join orders on order_items.order_id = orders.id
 left join products on order_items.product_id = products.id
